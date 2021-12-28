@@ -94,6 +94,8 @@ namespace College1
                     // it is written outside the loop so would be wxcuted juts once 
                     Console.Write("[+] {0} Factors are:", number);
                     // looping for each number less than given number to get all possible factors
+                    /*Caution We diveded number by two because a perfect number is a number
+                    that is half the sum of all of its positive divisors including itself*/
                     for (int possiableFactors = 1; possiableFactors <= number/2 ; possiableFactors++)
                     {
                         // using the factor definiation to check for all real factors as if we divide the number by its factor there will be no reminder 
