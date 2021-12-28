@@ -32,13 +32,14 @@ namespace College1
         Find GCD(B,R) using the Euclidean Algorithm since GCD(A,B) = GCD(B,R)*/
         public static int gCDRe(int a, int b)
         {
-            //my base case that involves finding a=0 or b=0 after last reminder
+            //my base case that involves finding b = 0 after last reminder operation
             if (b == 0)
             {
-                return a;//return the gcd
+                return a;//returning my gcd
             }
             else
             {
+                //trying new value as a divisor
                 return gCDRe(b, a % b);
             }
         }
