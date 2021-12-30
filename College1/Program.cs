@@ -239,7 +239,7 @@ namespace College1
                         GDRProgram();
                         break;
                 }
-                Console.Write("Do You Want To Try Again (y or any other charcter to exit29) ");
+                Console.Write("Do You Want To Try Again (y or any other charcter to exit) ");
                 string pass = Console.ReadLine();
                 if (!(pass == "y" || pass == "Y"))
                     break;
