@@ -46,8 +46,8 @@ namespace College1
         public static void GDRProgram()
         {
             Console.WriteLine("Enter Two Numbers Two Get Their GCD");
-            int in1;
-            int in2;
+            int in1 = 0;
+            int in2 = 0;
             bool isValid = false;//become true when you enter valid int
             bool isValid2 = false;//become true when you enter valid int
             //to confirm that the input is an integer
@@ -56,15 +56,35 @@ namespace College1
                 Console.Write("The first Number : ");
                 //return true in case the input is int and assign it to in1
                 if (int.TryParse(Console.ReadLine(), out in1))
-                    isValid = true;
+                {
+                    if (in1 != 0)
+                        isValid = true;
+                    else
+                    {
+                        Console.WriteLine("Input should be non-zero integer");
+                        continue;
+                    }
+                }
                 else
+                {
                     Console.WriteLine("not a valid input -- Please enter an intger");
+                }
                 Console.Write("The Second Number: ");
                 //return true in case the input is int and assign it to in2
                 if (int.TryParse(Console.ReadLine(), out in2))
-                    isValid2 = true;
+                {
+                    if (in2 != 0)
+                        isValid2 = true;
+                    else
+                    {
+                        Console.WriteLine("Input should be non-zero integer");
+                        continue;
+                    }
+                }
                 else
+                {
                     Console.WriteLine("not a valid input -- Please enter an intger");
+                }
             } while (!(isValid && isValid2));
             //runng my method and return ans to my console in iterative way
             Console.WriteLine("Their GCD (by iteration) Is: " + Gcd(in2, in1));
@@ -217,8 +237,11 @@ namespace College1
                         GDRProgram();
                         break;
                 }
-                Console.Write("Do You Want To Try Again (y or n) ");
-            } while (Console.ReadLine() == "y");
+                Console.Write("Do You Want To Try Again (y or any other charcter to exit29) ");
+                string pass = Console.ReadLine();
+                if (!(pass == "y" || pass == "Y"))
+                    break;
+            } while (true);
             Console.WriteLine(".....Have A Good Day.....");
         }
     }
