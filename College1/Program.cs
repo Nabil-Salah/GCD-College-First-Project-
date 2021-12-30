@@ -68,6 +68,7 @@ namespace College1
                 else
                 {
                     Console.WriteLine("not a valid input -- Please enter an intger");
+                    continue;
                 }
                 Console.Write("The Second Number: ");
                 //return true in case the input is int and assign it to in2
@@ -84,6 +85,7 @@ namespace College1
                 else
                 {
                     Console.WriteLine("not a valid input -- Please enter an intger");
+                    continue;
                 }
             } while (!(isValid && isValid2));
             //runng my method and return ans to my console in iterative way
