@@ -88,10 +88,13 @@ namespace College1
                     continue;
                 }
             } while (!(isValid && isValid2));
+            int ans = Gcd(in2, in1);
             //runng my method and return ans to my console in iterative way
-            Console.WriteLine("Their GCD (by iteration) Is: " + Gcd(in2, in1));
+            Console.WriteLine("Their GCD (by iteration) Is: " + ans);
             //runng my method and return ans to my console in recursve
             Console.WriteLine("Their GCD (by recursion) Is: " + gCDRe(in1, in2));
+            if (ans == 1)
+                Console.WriteLine("Look They Are Relatively Prime");
         }
         public static void PerfectNumbCheckProgram()
         {
