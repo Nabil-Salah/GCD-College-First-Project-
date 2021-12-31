@@ -1,4 +1,26 @@
-﻿using System;
+﻿/*
+PROGRAMMERS  : Mahmoud El Gohary && Nabil Mohamed 
+DATE CREATED : 21/12/2021
+PURPOSE :
+     GCD:
+         to find the great common divisor 
+         the largest intger d that 
+               d|a && d|b
+         Used to Simplify Fraction Numbers
+
+     Perfect Number:
+         To find the perfect numbers from 2 to 1000
+         the perfect number is a postive inger that the summation of its postive factors
+         excluding the number itself
+         is equal to the number itself
+VERY IMPORTANT:
+                using the definition of the perfect number we will find no odd perfect numbers
+                The reason we didnot implemnt that in our code is to keep the code as simple as possible
+                we didnot want to use classes or arrayes and use less functions as we can 
+                as shown the perfect number program shows the factors and the summantion of the factor and display them to the user
+                and if we try to make a condition for odd number it will be a must to repeat the code agin so we didnot make that          
+*/
+using System;
 
 namespace College1
 {
@@ -18,11 +40,9 @@ namespace College1
                 //Make a Temporery copy of a
                 temp = a;
                 a = b;//assign a to b to put the new greatest number in a again
-                if (temp % b == 0)//to prevent b from modification in case its the divisor
-                    break;
                 b = temp % b;//new value to try as a divisor
             }
-            return b;
+            return a;
         }
         // the recursive Method of gcd finding
         /*The Euclidean Algorithm for finding GCD(A,B) is as follows:
@@ -96,46 +116,42 @@ namespace College1
             if (ans == 1)
                 Console.WriteLine("Look They Are Relatively Prime");
         }
+        /*The PerfectNumbCheckProgram is created to prompt the user to enter an intger from 2 to 1000
+          as definiend in the problem and check if that number is perfect or not
+          by using the perfect number definition (he sum of the number factor must == the number itself)*/
         public static void PerfectNumbCheckProgram()
         {
             while (true)
             {
-                // Display a message to the user on the screen to help him enter the right input
-                Console.Write("Please enter an inger betwenn 2 and 1000 to check if it is perfect ot not: ");
-                // Declarain a local variable and storing the data given by the user as a string to check if it is valid for the programme or not
+                Console.Write("Please enter an inger betwenn 2 and 1000 to check if it is perfect ot not: "); // Prompt user for data
+                // Declarain a local variable and read the data given by the user to check if it is valid or not
                 var checkValidation = Console.ReadLine();
                 // Declaraing a variable as an intger to pass the user data to it if it is valid
                 int number;
-                // check if the input is an intger and return true in that case else will return a false and store it inf the parseSuccess variable
+                // check if the input is an intger to proceed
                 bool parseSuccess = int.TryParse(checkValidation, out number);
-                /* first if will check the parseSuccess value as a bool valuse true or false
-                   then will move to check in the number given by the user is in the range 
-                   as in ith task the number must me greater than two and less than thousand
-                   *** I user the logical operator and as all expressions must be true */
+                // using the logiacl operator and between the expression bestcaue we want all expression to be true
                 if (parseSuccess && number >= 2 && number <= 1000)
                 {
-                    // declaraing a variable to store the summation of the factors in it
                     int sumOfFactors = 0;
-                    // Displaying a message to the user to show him the factors
-                    // it is written outside the loop so would be wxcuted juts once 
+                    // Display the message outside the loop so it would be executed once so, the output would me more friendly
                     Console.Write("[+] {0} Factors are:", number);
-                    // looping for each number less than given number to get all possible factors
                     /*Caution We diveded number by two because a perfect number is a number
                     that is half the sum of all of its positive divisors including itself*/
-                    for (int possiableFactors = 1; possiableFactors <= number/2 ; possiableFactors++)
+                    for (int possiableFactors = 1; possiableFactors <= number / 2; possiableFactors++)
                     {
-                        // using the factor definiation to check for all real factors as if we divide the number by its factor there will be no reminder 
+                        // using the factor definiation of a factor to check for all real factors as if we divide the number by its factor there will be no reminder 
                         if (number % possiableFactors == 0)
                         {
-                            // displaying the factors
+                            // displaying the factors to screen
                             Console.Write(" {0} ", possiableFactors);
                             // adding all factors and storing them int the sumOfFactor variable
                             sumOfFactors += possiableFactors;
                         }
                     }
-                    // displaying a new line to show the output in a nicer way
+                    // displaying a new line so the output will be more friendly 
                     Console.WriteLine();
-                    // displaying the summation of the factors to the user
+                    // displaying the summation of the factors 
                     Console.WriteLine("[+] Sum of its factors is {0}", sumOfFactors);
                     // using the definiation of the perfect number by checking if the summation of the factors is equal to the number
                     if (sumOfFactors == number)
@@ -148,7 +164,7 @@ namespace College1
                     else
                     {
                         // if the number is not perfect this message will be displayed to the user
-                        Console.WriteLine("[+] This number is not perfect.\n");
+                        Console.WriteLine("[-] This number is not perfect.\n");
                         // the programme will get out of the while loop and stop
                         break;
                     }
@@ -164,15 +180,18 @@ namespace College1
                 }
             }
         }
+        /*The PerfectNumProgram is created to diplay all perfect number for 2 to 1000*/
         public static void PerfectNumProgram()
         {
-            // looping to get all nummbers in the given domain
+            // looping to get all nummbers in the given range
             for (int Number = 2; Number <= 1000; Number++)
             {
-                // Declaraing a variable to store the sum of factors and resting it in each loop for the outer loop
+                // Declaraing a variable to store the sum of factors and resting it in each loop for the outer loop 
                 int sum = 0;
                 // getting the all possible factores to each number in the outer loop
-                for (int possibleFactor = 1; possibleFactor < Number; possibleFactor++)
+                /*Caution We diveded number by two because a perfect number is a number
+                  that is half the sum of all of its positive divisors including itself*/
+                for (int possibleFactor = 1; possibleFactor <= Number / 2; possibleFactor++)
                 {
                     // searching for real factors
                     if (Number % possibleFactor == 0)
@@ -181,14 +200,14 @@ namespace College1
                         sum += possibleFactor;
                     }
                 }
-                // checking if the number is perfect or not
+                // checking if the number is perfect or not by using the definition on the perfect number
                 if (Number == sum)
                 {
-                    // showing the user the perfect number
+                    // Displaying the perfect numbers to the user
                     Console.Write("[+] {0} is a perfect Number \n", Number);
-                    // printing the factors to screen
+                    // Diaplaying the factors to screen
                     Console.Write("[+] Factors: ");
-                    // getting the factors agin to show the user
+                    // Display the factors to show the user
                     for (int factor = 1; factor < Number; factor++)
                     {
                         // checking for real factors
@@ -242,7 +261,7 @@ namespace College1
                         GDRProgram();
                         break;
                 }
-                Console.Write("Do You Want To Try Again (y or any other charcter to exit) ");
+                Console.Write("Do You Want To Try Again (y to tyr agin || any other character to exit) ");
                 string pass = Console.ReadLine();
                 if (!(pass == "y" || pass == "Y"))
                     break;
