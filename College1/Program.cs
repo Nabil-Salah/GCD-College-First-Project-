@@ -3,22 +3,23 @@ PROGRAMMERS  : Mahmoud El Gohary && Nabil Salah
 DATE CREATED : 21/12/2021
 PURPOSE :
      GCD:
-         to find the great common divisor 
-         the largest intger d that 
-               d|a && d|b
-         Used to Simplify Fraction Numbers
+          to find the great common divisor 
+             the largest intger d that 
+                   d|a && d|b
+          Used to Simplify Fraction Numbers
 
      Perfect Number:
-         To find the perfect numbers from 2 to 1000
-         the perfect number is a postive inger that the summation of its postive factors
-         excluding the number itself
-         is equal to the number itself
+          To find the perfect numbers from 2 to 1000
+          the perfect number is a postive inger that the summation of its postive factors
+          excluding the number itself
+          is equal to the number itself
+          
 VERY IMPORTANT:
-                using the definition of the perfect number we will find no odd perfect numbers
-                The reason we didnot implemnt that in our code is to keep the code as simple as possible
-                we didnot want to use classes or arrayes and use less functions as we can 
-                as shown the perfect number program shows the factors and the summantion of the factor and display them to the user
-                and if we try to make a condition for odd number it will be a must to repeat the code agin so we didnot make that          
+          using the definition of the perfect number we will find no odd perfect numbers
+          The reason we didnot implemnt that in our code is to keep the code as simple as possible
+          we didnot want to use classes or arrayes and use less functions as we can 
+          as shown the perfect number program shows the factors and the summantion of the factor and display them to the user
+          and if we try to make a condition for odd number it will be a must to repeat the code agin so we didnot make that          
 */
 using System;
 
