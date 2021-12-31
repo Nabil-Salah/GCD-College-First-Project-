@@ -258,7 +258,7 @@ namespace College1
                     case 3:
                         Console.WriteLine();
                         Console.WriteLine("Executing the programe [Find Greatest Common Divisor (GCD) Of Two Numbers]\n");
-                        GDRProgram();
+                        GCDProgram();
                         break;
                 }
                 Console.Write("Do You Want To Try Again (y to tyr agin || any other character to exit) ");
