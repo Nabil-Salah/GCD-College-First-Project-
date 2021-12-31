@@ -1,5 +1,5 @@
 ﻿/*
-PROGRAMMERS  : Mahmoud El Gohary && Nabil Mohamed 
+PROGRAMMERS  : Mahmoud El Gohary && Nabil Salah 
 DATE CREATED : 21/12/2021
 PURPOSE :
      GCD:
@@ -63,7 +63,7 @@ namespace College1
                 return gCDRe(b, a % b);
             }
         }
-        public static void GDRProgram()
+        public static void GCDProgram()
         {
             Console.WriteLine("Enter Two Numbers Two Get Their GCD");
             int in1 = 0;
@@ -258,7 +258,7 @@ namespace College1
                     case 3:
                         Console.WriteLine();
                         Console.WriteLine("Executing the programe [Find Greatest Common Divisor (GCD) Of Two Numbers]\n");
-                        GDRProgram();
+                        GCDProgram();
                         break;
                 }
                 Console.Write("Do You Want To Try Again (y to tyr agin || any other character to exit) ");
