@@ -63,7 +63,7 @@ namespace College1
                 return gCDRe(b, a % b);
             }
         }
-        public static void GDRProgram()
+        public static void GCDProgram()
         {
             Console.WriteLine("Enter Two Numbers Two Get Their GCD");
             int in1 = 0;
