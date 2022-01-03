@@ -19,7 +19,7 @@ PURPOSE :
         The reason we didnot implemnt that in our code is to keep the code as simple as possible
         we didnot want to use classes or arrayes and use less functions as we can 
         as shown the perfect number program shows the factors and the summantion of the factor and display them to the user
-        and if we try to make a condition for odd number it will be a must to repeat the code agin so we didnot make that          
+        and if we try to make a condition for odd number it will be a must to repeat the code agin so we didnot make that                   
 */
 using System;
 
